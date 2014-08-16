@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+        <link href="estilos.css" rel="stylesheet" />
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="Scripts/app.js"></script>
+    </head>
+    <body>
+        <header class="fijo">
+            <input type="checkbox" id="chkMenu" style="display: none;" />
+            <label for="chkMenu">&#9776;</label>
+            <span id="titulo">Calidad Music</span>
+        </header>
+        <section class="cuerpo">
+            <aside>
+            	<form>
+                	<input id="txtBusqueda2" name="buscarPor" type="text"  placeholder="&#128269; Buscar por canción, artísta o género" />
+                	<button id="btnBuscar2"></button>
+            	</form>
+                <nav>
+                    <ul class="menu" >
+                        <li class="seleccionado">
+                            <a href="#Inicio">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#Cola">Cola de reproducción</a>
+                        </li>
+                        <li>
+                            <a href="administrar.php" target="_blank">Subir canciones</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div id="divResultados">
+            	<form>
+                	<input id="txtBusqueda" name="buscarPor" type="text" autofocus="true" placeholder="&#128269; Buscar por canción, artísta o género" />
+                	<button id="btnBuscar">Buscar</button>
+            	</form>
+                <ul id="listas" class="lista">
+                    <li>
+                    	<input type="hidden" value="Kalimba.mp3" />
+                        <img src="http://images.gs-cdn.net/static/broadcasts/80_1350501-1393249065.jpg" />
+                        <h2>Alternative and Indie Mix</h2>
+                        <h3>Caleb • Indie Rock</h3>
+                    </li>
+                    <li >
+                    	<input type="hidden" value="Sleep Away.mp3" />
+                        <img src="http://images.gs-cdn.net/static/albums/40_2413335.jpg" />
+                        <h2>In the End</h2>
+                        <h3>Linkin Park • Hybrid Theory</h3>
+                        
+                    </li>
+                    <li>
+                    	<input type="hidden" value="Maid with the Flaxen Hair.mp3" />
+                        <img src="http://images.gs-cdn.net/static/albums/40_5889147.jpg" />
+                        <h2>Payphone</h2>
+                        <h3>Maroon 5 • Overexposed</h3>
+                    </li>
+                </ul>
+            </div>
+            <div id="divCola" style="display: none;">
+                <ul class="lista">
+                </ul>
+            </div>
+        </section>
+        <footer class="fijo">
+            <span class="controles">
+                <button id="botonPausa" class="play">||</button>
+            </span>
+            <a href="#Cola">
+                <audio id="reproductor"></audio>
+                <div id="divReproductor">
+                    <p>1 canción en la cola</p>
+                </div>
+            </a>
+        </footer>
+    </body>
+</html>
