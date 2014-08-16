@@ -216,7 +216,7 @@ aside form {
     color: #EBEBEB;
 }
 
-.lista {
+ul.lista {
     display: block;
     width: 100%;
     background-color: #DDD;
@@ -224,7 +224,11 @@ aside form {
     border: red green blue yellow;
 }
 
-.lista > li {
+.lista > li{
+    background-color: #FFF;
+}
+
+.lista > li, #divReproductor  {
     position: relative;
     padding: 5px 50px 5px 64px;
     height: 48px;
@@ -238,7 +242,8 @@ aside form {
     background-color: gold;
 }
 
-.lista img {
+
+.lista img, #divReproductor img {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -246,7 +251,7 @@ aside form {
     left: 4px;
 }
 
-.lista h2 {
+.lista h2, #divReproductor h2 {
     font-size: 15px;
     line-height: 21px;
     margin: 4px 0px 2px;
@@ -256,7 +261,7 @@ aside form {
     overflow: hidden;
 }
 
-.lista h3 {
+.lista h3, #divReproductor h3 {
     font-size: 12px;
     line-height: 16px;
     text-shadow: 0px 1px 1px #FFF;
@@ -271,12 +276,10 @@ aside form {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    color: white;
 }
 
-.controles{
-
-    float: left;
+controles{
+    float: right;
 }
 
 
@@ -292,6 +295,7 @@ aside form {
 .pause{
     background-image:  url("Imagenes/pause.png");
 }
+
 
 
 @media only screen and (min-width: 640px) {

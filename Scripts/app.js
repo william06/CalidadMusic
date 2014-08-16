@@ -29,10 +29,11 @@ $(document).ready(function () {
 
     $("form").on("submit", function (e) {
         e.preventDefault();
-        var buscarPor = $("#txtBusqueda").val();
+        var textoDeBusqueda = $("#txtBusqueda").val();
 
         $.ajax({
-            url: "Servidor/prueba.php"
+            url: "Servidor/prueba.php",
+            data: { buscarPor: textoDeBusqueda }
         }).done(function (datos) {
             $("#divCola").html(datos);
         }).fail(function (error) {
