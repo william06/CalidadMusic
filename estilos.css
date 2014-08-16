@@ -177,6 +177,7 @@ aside form {
     background-color: #282828;
     height: 100%;
     display: none;
+    min-width: 200px;
 }
 
 .cuerpo nav {
@@ -233,7 +234,7 @@ ul.lista {
     padding: 5px 50px 5px 64px;
     height: 48px;
     color: #000;
-    background-color: #FFF;
+    
     border-bottom: 1px solid #DDD;
     cursor: pointer;
 }
@@ -276,9 +277,11 @@ ul.lista {
     text-align: center;
     font-size: 14px;
     font-weight: bold;
+    color:white;
 }
 
-controles{
+
+.controles{
     float: right;
 }
 

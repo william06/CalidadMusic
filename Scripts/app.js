@@ -11,7 +11,7 @@ $(document).ready(function () {
 
                 $("#divCola").hide("fast", function () {
                     $("#divResultados").show("fast");
-                })
+                });
                 break;
             case "Cola":
                 $(".menu li:nth-child(1)").removeClass("seleccionado");
@@ -20,7 +20,7 @@ $(document).ready(function () {
                 $("#divResultados").hide("fast", function () {
                     $("#divCola").show("fast");
 
-                })
+                });
 
                 break;
         }
@@ -53,14 +53,14 @@ $(document).ready(function () {
 
     $(".lista li").click(function () {
         var archivo = $(this).find("input[type=hidden]").val();
-        var cancionEnCola = $("#divCola .lista li input[value='"+ archivo +"']");
-        if(cancionEnCola.length==0){
+        var cancionEnCola = $("#divCola .lista li input[value='" + archivo + "']");
+        if (cancionEnCola.length == 0) {
             $("#divCola .lista").append("<li>" + $(this).html() + "</li>");
             $("#reproductor").attr("src", "Musica/" + archivo);
-        
-        document.getElementById('reproductor').play();
+
+            document.getElementById('reproductor').play();
         }
-    
+
     });
 
     $("#botonPausa").click(function () {
@@ -78,8 +78,8 @@ $(document).ready(function () {
     });
 
 
-     $('#chkMenu + label').click(function(){
-		$('.cuerpo > aside').toggle();
-		
-	});
-})
+    $('#chkMenu + label').click(function () {
+        $('.cuerpo > aside').toggle();
+
+    });
+});
