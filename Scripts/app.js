@@ -67,12 +67,12 @@ $(document).ready(function () {
         var reproductor = document.getElementById("reproductor");
         if (reproductor.paused) {
             reproductor.play();
-            $(this).removeClass("pause");
-            $(this).addClass("play");
+            $(this).removeClass("icon-play");
+            $(this).addClass("icon-pause");
         } else {
             reproductor.pause();
-            $(this).removeClass("play");
-            $(this).addClass("pause");
+            $(this).removeClass("icon-pause");
+            $(this).addClass("icon-play");
         }
 
     });
@@ -82,4 +82,29 @@ $(document).ready(function () {
         $('.cuerpo > aside').toggle();
 
     });
+
+
+    $("#botonAtras").click(function () {
+    	for(var i=0; i < cola.length; i++){ 
+        	if(cola[i]==cancionActual){
+        		$("#reproductor").attr("src", "Musica/" + cola[i-1]);
+        		document.getElementById('reproductor').play();
+        		cancionActual=cola[i-1];
+        	}
+        }
+    });
+    
+    
+    $("#botonSiguiente").click(function () {
+    	for(var i=0; i < cola.length; i++){ 
+        	if(cola[i]==cancionActual){
+        		$("#reproductor").attr("src", "Musica/" + cola[i+1]);
+        		document.getElementById('reproductor').play();
+        		cancionActual=cola[i+1];
+        		break;
+        	}
+        		 
+        }
+    });
+
 });

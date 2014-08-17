@@ -229,7 +229,7 @@ ul.lista {
     background-color: #FFF;
 }
 
-.lista > li, #divReproductor  {
+.lista > li {
     position: relative;
     padding: 5px 50px 5px 64px;
     height: 48px;
