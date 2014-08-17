@@ -272,6 +272,30 @@ ul.lista {
     overflow: hidden;
 }
 
+.lista span{
+	float:right;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+
+#divCola .lista span{
+	display: none;
+}
+
+
+#divCola .lista .icon-remove{
+	display: block;
+}
+
+#divResultados .lista .icon-remove{
+	display: none;
+}
+
+
+
+
+
 #divReproductor > p {
     line-height: 40px;
     text-align: center;
