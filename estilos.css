@@ -272,11 +272,35 @@ ul.lista {
     overflow: hidden;
 }
 
+
 .lista span{
 	float:right;
 	margin-top: 20px;
 	margin-right: 10px;
 }
+
+
+#divReproductor img{
+	display: block;
+	float: left;
+}
+
+
+#divReproductor{
+	text-align: center;
+	
+}
+
+#divReproductor span{
+	display: none;
+	
+}
+
+#divReproductor h2, #divReproductor h3{
+	color:white;
+	
+}
+
 
 
 #divCola .lista span{

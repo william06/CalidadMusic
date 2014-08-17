@@ -57,7 +57,7 @@ $(document).ready(function () {
         if (cancionEnCola.length == 0) {
             $("#divCola .lista").append("<li>" + $(this).html() + "</li>");
             $("#reproductor").attr("src", "Musica/" + archivo);
-
+			$("#divReproductor").html($(this).html());
             document.getElementById('reproductor').play();
             cola.push(archivo);
             cancionActual=archivo;
@@ -86,12 +86,15 @@ $(document).ready(function () {
     });
 
 
-    $("#botonAtras").click(function () {
+     $("#botonAtras").click(function () {
     	for(var i=0; i < cola.length; i++){ 
         	if(cola[i]==cancionActual){
         		$("#reproductor").attr("src", "Musica/" + cola[i-1]);
         		document.getElementById('reproductor').play();
         		cancionActual=cola[i-1];
+        		
+        		var cancionEnCola = $("#divCola .lista li input[value='" + cancionActual + "']");
+        		$("#divReproductor").html(cancionEnCola.parent().html());
         	}
         }
     });
@@ -103,11 +106,15 @@ $(document).ready(function () {
         		$("#reproductor").attr("src", "Musica/" + cola[i+1]);
         		document.getElementById('reproductor').play();
         		cancionActual=cola[i+1];
+        		
+        		var cancionEnCola = $("#divCola .lista li input[value='" + cancionActual + "']");
+        		$("#divReproductor").html(cancionEnCola.parent().html());
         		break;
         	}
         		 
         }
     });
+    
 
 
     //agregar al final de la cola
@@ -143,6 +150,9 @@ function siguienteCancion(){
         		$("#reproductor").attr("src", "Musica/" + cola[i+1]);
         		document.getElementById('reproductor').play();
         		cancionActual=cola[i+1];
+        		
+        		var cancionEnCola = $("#divCola .lista li input[value='" + cancionActual + "']");
+        		$("#divReproductor").html(cancionEnCola.parent().html());
         		break;
         	}
         		 
