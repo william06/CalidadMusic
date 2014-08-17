@@ -59,6 +59,8 @@ $(document).ready(function () {
             $("#reproductor").attr("src", "Musica/" + archivo);
 
             document.getElementById('reproductor').play();
+            cola.push(archivo);
+            cancionActual=archivo;
         }
 
     });
