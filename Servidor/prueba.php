@@ -24,7 +24,7 @@
     }   
     
     function buscarCanciones($criterio)
-    {
+    { 
         try
         {        
             //Establecer conexión
