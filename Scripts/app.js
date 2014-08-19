@@ -29,13 +29,20 @@ $(document).ready(function () {
 
     $("form").on("submit", function (e) {
         e.preventDefault();
-        var textoDeBusqueda = $("#txtBusqueda").val();
+		if($("#txtBusqueda").val()==='')
+			{
+				alert("Por favor introduzca algún valor");
+				return false;
+			}
+        var textoBusqueda = ("buscarPor") + $("#txtBusqueda").val();
 
         $.ajax({
+			type: "POST",
             url: "Servidor/prueba.php",
-            data: { buscarPor: textoDeBusqueda }
-        }).done(function (datos) {
-            $("#divCola").html(datos);
+			dataType:"text",
+            data: textoBusqueda
+        }).done(function (buscarCanciones) {
+            $("#divResultados").html(buscarCanciones);
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
@@ -140,7 +147,6 @@ function borrar(){
    
     	var pos =cola.indexOf(archivo);
     	pos > -1 && cola.splice(pos,1);
-    });
 }
 
 
