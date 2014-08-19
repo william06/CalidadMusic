@@ -24,7 +24,7 @@
     }   
     
     function buscarCanciones($criterio)
-    { 
+    {
         try
         {        
             //Establecer conexión
@@ -80,7 +80,6 @@
 		<script src="../Scripts/app.js"></script>
     </head>
     <body>
-		<div id="divResultados">
             <form>
                 <input id="txtBusqueda" name="buscarPor" type="text" autofocus="true" placeholder="&#128269; Buscar por cancion, artista o genero" />
                 <button id="btnBuscar">Buscar</button>
@@ -89,8 +88,13 @@
 				<ul class="lista">
 					<?php buscarCanciones(""); ?>
 				</ul>
-			</div>	
-		</div>		
+			</div>
+						<footer class="fijo">
+			<span class="controles" >
+            	<button id="botonAtras" class="icon-backward"></button>
+                <button id="botonPausa" class="icon-pause"></button>
+                <button id="botonSiguiente" class="icon-forward"></button>
+            </span>	
+			</footer>
     </body>
 </html>
-
