@@ -348,6 +348,20 @@ ul.lista {
 }
 
 
+#menuCola{
+	width: 100%;
+	height: 30px;
+	font-size: 22px;
+	text-align: center;
+	margin 4px auto;
+	background-color:silver;
+}
+
+span:hover{
+	cursor:pointer;
+}
+
+
 
 @media only screen and (min-width: 640px) {
     #chkMenu + label {

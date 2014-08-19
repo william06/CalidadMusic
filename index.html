@@ -7,12 +7,14 @@
         <link rel="stylesheet" href="style.css">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="Scripts/app.js"></script>
+        
     </head>
     <body>
         <header class="fijo">
             <input type="checkbox" id="chkMenu" style="display: none;" />
             <label for="chkMenu">&#9776;</label>
             <span id="titulo">Calidad Music</span>
+            
         </header>
         <section class="cuerpo">
             <aside>
@@ -44,7 +46,7 @@
                     <li>
                         <input type="hidden" value="Kalimba.mp3"/>
                         <img src="http://images.gs-cdn.net/static/broadcasts/80_1350501-1393249065.jpg" />
-                        <span class="icon-indent-increase" ></span>
+                        <span class="icon-indent-increase" title="Agregar al final de la cola" ></span>
                         <span class="icon-play" ></span>
                         <span class="icon-remove" onclick="borrar()" ></span>
                         <h2>Alternative and Indie Mix</h2>
@@ -54,7 +56,7 @@
                     <li>
                         <input type="hidden" value="Adele - Someone Like You - 21.mp3"/>
                         <img src="http://images.gs-cdn.net/static/albums/40_2413335.jpg" />
-                        <span class="icon-indent-increase" ></span>
+                        <span class="icon-indent-increase" title="Agregar al final de la cola" ></span>
                         <span class="icon-play" ></span>
                         <span class="icon-remove" onclick="borrar()" ></span>
                         <h2>In the End</h2>
@@ -63,7 +65,7 @@
                     <li>
                         <input type="hidden" value="Coldplay - Viva la Vida - Greatest Hits.mp3"/>
                         <img src="http://images.gs-cdn.net/static/albums/40_5889147.jpg" />
-                        <span class="icon-indent-increase" ></span>
+                        <span class="icon-indent-increase" title="Agregar al final de la cola"></span>
                         <span class="icon-play" ></span>
                         <span class="icon-remove" onclick="borrar()" ></span>
                         <h2>Payphone</h2>
@@ -73,6 +75,12 @@
                 </div>
             </div>
             <div id="divCola" style="display: none;">
+                <div id="menuCola">
+            		<span class="icon-undo" style="float: left;"></span>
+                    <span class="icon-shuffle"  ></span>
+                    <span class="icon-indent-increase" ></span>
+                    <span class="icon-remove2" style="float: right;"></span>
+                </div>
                 <ul class="lista">
                 </ul>
             </div>
