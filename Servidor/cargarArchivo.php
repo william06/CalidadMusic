@@ -14,7 +14,7 @@
                 echo "Guardado en: "        .  $_FILES["archivo"]["tmp_name"] . "<br />";
             
                 //Mover el archivo subido a la ubicación temporal a la carpeta destino que queramos
-                //move_uploaded_file($_FILES["archivo"]["tmp_name"], "Musica/" . $_FILES["archivo"]["name"]);
+                move_uploaded_file($_FILES["archivo"]["tmp_name"], "archivos/" . $_FILES["archivo"]["name"]);
             }
         ?>
     </body>
