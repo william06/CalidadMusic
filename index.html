@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="Scripts/app.js"></script>
-        
+        <title>Calidad Music</title>
     </head>
     <body>
         <header class="fijo">
@@ -76,10 +76,12 @@
             </div>
             <div id="divCola" style="display: none;">
                 <div id="menuCola">
-            		<span class="icon-undo" style="float: left;"></span>
-                    <span class="icon-shuffle"  ></span>
-                    <span class="icon-indent-increase" ></span>
-                    <span class="icon-remove2" style="float: right;"></span>
+            		<a href="#Inicio"><span class="icon-undo" ></span></a>
+            		<input type="radio" id="chkAleatorio" style="display: none;" name="reproduccion" />
+                    <label class="icon-shuffle" for="chkAleatorio" style="margin-right: 20px;" title="reproduccion aleatoria"></label>
+                    <input type="radio" id="chkLista" style="display: none;" name="reproduccion" checked="checked" />
+                    <label class="icon-indent-decrease" for="chkLista" title="reproduccion secuencial"></label>
+                    <span class="icon-remove2" style="float: right;" title="borrar todas las canciones"></span>
                 </div>
                 <ul class="lista">
                 </ul>

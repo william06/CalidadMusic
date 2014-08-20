@@ -139,7 +139,29 @@ for(var i=0; i<lista.length;i++){
 
         });
 
-    });
+
+         //borrar todas las canciones 
+        $("#menuCola .icon-remove2").click(function(){
+    	    cola=[];
+    	    $("#divCola .lista li").remove();
+        });
+
+        $("#divCola .lista li").click(function () {
+            var archivo = $(this).find("input[type=hidden]").val();
+            $("#reproductor").attr("src", "Musica/" + archivo);
+		    $("#divReproductor").html($(this).html());
+            document.getElementById('reproductor').play();
+            cancionActual=archivo;
+        
+        });
+
+
+
+    });//fin document.ready
+
+
+    
+
 
 
 function borrar(){
@@ -154,31 +176,32 @@ function borrar(){
 
 
 function siguienteCancion(){
-	for(var i=0; i < cola.length-1; i++){ 
-        	if(cola[i]==cancionActual){
-        		$("#reproductor").attr("src", "Musica/" + cola[i+1]);
-        		document.getElementById('reproductor').play();
-        		cancionActual=cola[i+1];
-        		
-        		var cancionEnCola = $("#divCola .lista li input[value='" + cancionActual + "']");
-        		$("#divReproductor").html(cancionEnCola.parent().html());
-        		break;
-        	}
-        		 
-        }
-}
-
-
-
-function siguienteCancionr(){
-    var random= Math.random()*cola.length+1
-	for(var i=0; i < cola.length; i++){ 
-        $("#reproductor").attr("src", "Musica/" + cola[random]);
+	if($("#chkAleatorio").is(":checked")){
+		//reproducir aleatorio
+		var random = Math.random() * cola.length ;
+	
+        $("#reproductor").attr("src", "Musica/" + cola[parseInt(random)]);
         document.getElementById('reproductor').play();
-        cancionActual=cola[random];
+        cancionActual=cola[parseInt(random)];
         		
         var cancionEnCola = $("#divCola .lista li input[value='" + cancionActual + "']");
         $("#divReproductor").html(cancionEnCola.parent().html());
-        		 
-        }
+	}else{
+		//reproduccion en lista
+		for(var i=0; i < cola.length-1; i++){ 
+	        	if(cola[i]==cancionActual){
+	        		$("#reproductor").attr("src", "Musica/" + cola[i+1]);
+	        		document.getElementById('reproductor').play();
+	        		cancionActual=cola[i+1];
+	        		
+	        		var cancionEnCola = $("#divCola .lista li input[value='" + cancionActual + "']");
+	        		$("#divReproductor").html(cancionEnCola.parent().html());
+	        		break;
+	        	}
+	        		 
+	        }
+    }
+
 }
+
+

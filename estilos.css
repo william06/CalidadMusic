@@ -77,7 +77,7 @@ aside form {
     padding: 2px 9px;
 }
 
-#chkMenu + label:hover {
+#chkMenu + label:hover, .icon-undo:hover,.icon-remove2:hover {
     color: gold;
     border-color: gold;
 }
@@ -339,14 +339,6 @@ ul.lista {
     height:  30px;
 }
 
-.play{
-    background-image:  url("Imagenes/play.png");
-}
-
-.pause{
-    background-image:  url("Imagenes/pause.png");
-}
-
 
 #menuCola{
 	width: 100%;
@@ -354,11 +346,20 @@ ul.lista {
 	font-size: 22px;
 	text-align: center;
 	margin 4px auto;
-	background-color:silver;
+	background-color:grey;
 }
 
-span:hover{
+span:hover, label:hover{
 	cursor:pointer;
+}
+
+#chkAleatorio:checked + label, #chkLista:checked  + label{
+	color: gold;
+}
+
+.icon-undo{
+    color: black;
+    float: left;
 }
 
 
